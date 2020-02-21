@@ -39,6 +39,5 @@ That looks to be a runtime of n + 1, so it would be a O(n) runtime.
 Another strategy would be to start at the middle floor and drop an egg to see if it breaks. If it does the floor f is in the first half of the floors. If it does not the floor f is in the second half of the floors.
 Next you can go the middle point of the half of floors where we know the floor f to be. Then we drop an egg from there and see if it breaks. Continuing this process of dropping an egg at the middle point we can break the list of floors in half each time to determine where the floor f is that will make eggs break.
 
-In the worse case scenario this would give us n / 2 dropped eggs plus 1 broken egg.
-This would be a O(log(n)) runtime.
+In the worse case scenario this would be an O(log(n)) runtime.
 
