@@ -96,8 +96,58 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
-        # Fill this out
-        pass
+        # Pick up item
+        # Check if light is off
+        # If light is off
+        # Check if can move right
+        # If can move right then move right
+        # Else set light on and pass
+        # If moved to the right compare items
+        # If held item is greater swap and pass
+        # If None returned swap change light and pass
+        # If light is on
+        # Check if can move left
+        # If can move left then move left
+        # If moved to the left compare items
+        # If held item is greater swap and pass
+        # If None returned swap change light and pass
+
+        # Need to determine state when list is known to be sorted to break process
+        self.swap_item()
+
+        # Set range for amounts to run code is a placeholder to keep
+        # an infinite loop from happening while testing
+        for i in range(0,10):
+            if self.light_is_on():
+                if self.can_move_left():
+                    self.move_left()
+                    if self.compare_item() == 1:
+                        self.swap_item()
+                        pass
+                    elif self.compare_item() is None:
+                        self.swap_item()
+                        self.set_light_off()
+                        pass
+                    else:
+                        pass
+                else:
+                    self.set_light_off()
+                    pass
+            else:
+                if self.can_move_right():
+                    self.move_right()
+                    if self.compare_item() == 1:
+                        self.swap_item()
+                        pass
+                    elif self.compare_item() is None:
+                        self.swap_item()
+                        self.set_light_on()
+                        pass
+                    else:
+                        pass
+                else:
+                    self.set_light_on()
+                    pass
 
 
 if __name__ == "__main__":
