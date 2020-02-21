@@ -3,14 +3,23 @@
 ## Exercise I
 
 a)
+New Answer:
+O(n)
+This loop runs once for every n in the input. It does some math operations but it is the same amount of operations on each iteration.
 
+Original Answer:
 O(n^3)
 The code starts by setting a variable a with the value of 0. There is a while loop that looks at a and compares it to n times n times n or n^3. This comparison is done on every iteration of the loop and the multiplcation has to be performed each time. Instead if one created a variable outside of the loop and setting its value to n^3 for comparison it could be a constant time lookup for the value of that variable.
 There is also a not so simple math operation happening on each iteration. With the need to perform the calculation of n^3 on each iteration I think this gets exponentially difficult with larger inputs.
 
 
 b)
+New Answer:
+This is O(nlog(n))
+It will run a loop for every element of n and also will do half as many iterations on the inner loop for each element of n.
 
+
+Original Answer:
 O(n^2)
 There are two loops in the code with one nested beneath the other. The first loop is going over every item for the input n. If the input n was 10 it would be iterating 10 times.
 On each iteration of the outer loop the inner loop decalres a variable of j and sets it to the value of 1. This then goes while the value is less than the input n. Inside this loop it multiplies j by 2 and will do a number of iterations that is half the value of n.
